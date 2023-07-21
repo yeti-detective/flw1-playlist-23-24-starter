@@ -1,10 +1,6 @@
-Certainly, here's the updated README:
+# Playlist Project
 
----
-
-# Playlist Project Using HTML/CSS/JS
-
-## Lesson 2.1: Introduction to Functions
+## Lesson 2.1: Functions
 **Objective**: Get started with the project, understand the inspiration behind it, and gather song data.
 
 ### Tasks:
@@ -13,14 +9,14 @@ Certainly, here's the updated README:
 - [ ] **Brainstorming**: Complete the “Let’s Brainstorm” section.
 - [ ] **Data Collection**: Fill in your favorite tracks in “Collect Song Data”.
 
-## Lesson 2.2: Understanding Arrow Functions
+## Lesson 2.2: Arrow Functions
 **Objective**: Review and practice using arrow functions while getting familiar with the starter code.
 
 ### Tasks:
 - [ ] **Code Review**: Read through the provided HTML and JavaScript starter code.
 - [ ] **Code Creation**: Declare variables for display divs.
 
-## Lesson 2.3: Arrays & Indexes
+## Lesson 2.3: Arrays
 **Objective**: Create arrays to store song data and start customizing the style of your playlist.
 
 ### Tasks:
@@ -29,7 +25,7 @@ Certainly, here's the updated README:
 
    _Considerations_: You might want to have an array for each data type: one for image URLs, one for song names, one for artists, and one for song links.
 
-## Lesson 2.4: Introduction to Loops
+## Lesson 2.4: Loops
 **Objective**: Learn to manipulate arrays using loops and display song data.
 
 ### Tasks:
@@ -44,7 +40,7 @@ Certainly, here's the updated README:
 - [ ] **Variables**: Declare variables to save the user input. You need four in total: image URLs, song names, artists, and song links.
 - [ ] **Array Manipulation**: Use the `.push()` method to add the user input to the appropriate arrays.
 
-## Lesson 2.6: Working with Objects
+## Lesson 2.6: Objects
 **Objective**: Refactor your data to use objects instead of arrays for better data management.
 
 ### Tasks:
