@@ -1,7 +1,7 @@
 # Playlist Project
 
-## Functions
-**Objective**: Get started with the project, understand the inspiration behind it, and gather song data.
+## Planning & Functions
+**Goal #1**: Get started with the project, understand the inspiration behind it, and gather song data.
 
 ### Tasks:
 - [ ] **Setup**: Clone or Fork the [Starter Code](#link-to-starter-code).
@@ -10,14 +10,16 @@
 - [ ] **Data Collection**: Fill in your favorite tracks in “Collect Song Data”.
 
 ## Arrow Functions
-**Objective**: Review and practice using arrow functions while getting familiar with the starter code.
+**Goal #1**: Review and practice using arrow functions while getting familiar with the starter code.
+**Goal #2**: Store html elements in variables.
 
 ### Tasks:
 - [ ] **Code Review**: Read through the provided HTML and JavaScript starter code.
 - [ ] **Code Creation**: Declare variables for display divs.
 
 ## Arrays
-**Objective**: Create arrays to store song data and start customizing the style of your playlist.
+**Goal #1**: Create arrays to store song data.
+**Goal #2**: Start customizing the CSS of your playlist.
 
 ### Tasks:
 - [ ] **Data Structures**: Create arrays to store song data.
@@ -26,7 +28,7 @@
    _Considerations_: You might want to have an array for each data type: one for image URLs, one for song names, one for artists, and one for song links.
 
 ## Loops
-**Objective**: Learn to manipulate arrays using loops and display song data.
+**Goal #1**: Learn to manipulate arrays using loops and display song data.
 
 ### Tasks:
 - [ ] **Looping**: Loop through arrays using either `for`, `forEach`, or other loop structures and display song data.
@@ -34,14 +36,15 @@
   _Considerations_: Think about the type of HTML tags to use for your data and the div container to which you're displaying the data.
 
 ## Array Properties & Methods
-**Objective**: Get hands-on experience with array properties and methods.
+**Goal #1**: Store user input to add new songs.
+**Goal #2**: Push new songs to playlist data.
 
 ### Tasks:
 - [ ] **Variables**: Declare variables to save the user input. You need four in total: image URLs, song names, artists, and song links.
 - [ ] **Array Manipulation**: Use the `.push()` method to add the user input to the appropriate arrays.
 
 ## Objects
-**Objective**: Refactor your data to use objects instead of arrays for better data management.
+**Goal #1**: Refactor your data to use objects instead of arrays for better data management.
 
 ### Tasks:
 - [ ] **Refactoring**: Refactor your data to use objects instead of arrays.
