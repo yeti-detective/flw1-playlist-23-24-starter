@@ -11,6 +11,7 @@
 
 ## Arrow Functions
 **Goal #1**: Review and practice using arrow functions while getting familiar with the starter code.
+
 **Goal #2**: Store html elements in variables.
 
 ### Tasks:
@@ -19,6 +20,7 @@
 
 ## Arrays
 **Goal #1**: Create arrays to store song data.
+
 **Goal #2**: Start customizing the CSS of your playlist.
 
 ### Tasks:
@@ -37,6 +39,7 @@
 
 ## Array Properties & Methods
 **Goal #1**: Store user input to add new songs.
+
 **Goal #2**: Push new songs to playlist data.
 
 ### Tasks:
