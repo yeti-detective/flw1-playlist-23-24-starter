@@ -1,4 +1,5 @@
 // Declare variables below
+const placeholderImageUrl = '/placeholder_image.jpeg'
 
 /**
  * JSON.stringifies `songList` & saves it to localStorage under the key "songList"
@@ -13,7 +14,7 @@ function saveSongList(songList) {
  * @returns {[]}
  */
 function getSongList() {
-  return JSON.parse(localStorage.getItem('songList'))
+  return JSON.parse(localStorage.getItem('songList')) || [];
 }
 
 /**
@@ -24,8 +25,23 @@ function getSongList() {
  * @param songUrl {string}
  * @returns {{artist, imageUrl, title, songUrl}}
  */
-function makeSongObject(title, artist, imageUrl, songUrl) {
-  return {title, artist, imageUrl, songUrl}
+function getSongObject(title, artist, imageUrl, songUrl) {
+  return {title, artist, imageUrl: imageUrl || placeholderImageUrl, songUrl}
+}
+
+/**
+ * Returns true if all required fields are filled. Alerts user if fields are missing.
+ * @param songObject {object}
+ * @returns {boolean}
+ */
+function validateSongObject(songObject) {
+  for (const key of Object.keys(songObject)) {
+    if (!songObject[key]) {
+      alert(`${key} is a required field`)
+      return false;
+    }
+  }
+  return true;
 }
 
 const getColumn = columnId => document.getElementById(columnId)
@@ -34,6 +50,7 @@ const getTextDisplay = text => {
   const div = getDiv();
   const h3 = document.createElement('h3');
   h3.innerText = text;
+  div.appendChild(h3);
   return div;
 }
 
@@ -67,9 +84,19 @@ function appendSongUrl(songUrl, title) {
   linksCol.appendChild(anchor)
 }
 
+function clearDisplaySection() {
+  // removes all children of each column
+  getColumn('images').textContent = ''
+  getColumn('songs').textContent = ''
+  getColumn('artists').textContent = ''
+  getColumn('links').textContent = ''
+}
+
 // Use the body of this function to display your playlist.
 function displaySongInfo() {
   const songList = getSongList();
+
+  clearDisplaySection();
 
   for (const {imageUrl, title, artist, songUrl} of songList) {
     appendImageUrl(imageUrl);
@@ -78,33 +105,46 @@ function displaySongInfo() {
     appendSongUrl(songUrl, title)
   }
 }
-  
 
-
-
-  // This function empties the divs each time the button is clicked.
-  // This prevents the playlist from repeatedly adding data.
-  // Try commenting out this function call to see what happens without it!
-  function emptySongInfo() {
-    $(".songs").empty();
-    $(".images").empty();
-    $(".artists").empty();
-    $(".lengths").empty();
-    $(".links").empty();
+function clearInputFields() {
+  const inputs = document.querySelectorAll('input')
+  for (const input of inputs) {
+    input.value = '';
   }
-  
+}
+
+// This function empties the divs each time the button is clicked.
+// This prevents the playlist from repeatedly adding data.
+// Try commenting out this function call to see what happens without it!
+// function emptySongInfo() {
+//   document.querySelector('.songs').value = '';
+//   document.querySelector('.images').value = '';
+//   document.querySelector('.artists').value = '';
+//   document.querySelector('.lengths').value = '';
+//   document.querySelector('.links').value = '';
+// }
+
 
 // Use the body of this function to add new songs to your playlist.
-  function addSongInfo() {
+function addSongInfo() {
+  // get new values from the UI
+  const title = document.querySelector('input.title').value;
+  const artist = document.querySelector('input.artist').value;
+  const imageURL = document.querySelector('input.image').value;
+  const songURL = document.querySelector('input.link').value;
 
+  const newSongObj = getSongObject(title, artist, imageURL, songURL)
 
-  }
-  
-  
-  document.querySelector("#add").addEventListener("click", function () {
-    emptySongInfo();
-    addSongInfo();
+  if (validateSongObject(newSongObj)) {
+    // get current song list
+    const currentSongs = getSongList();
+    currentSongs.push(newSongObj);
+    saveSongList(currentSongs);
     displaySongInfo();
-  });
-  
-  displaySongInfo();
+    clearInputFields();
+  }
+}
+
+document.querySelector('button.add-input').addEventListener('click', addSongInfo);
+
+displaySongInfo();
