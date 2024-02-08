@@ -1,3 +1,13 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url('https://images4.alphacoders.com/326/thumb-1920-32616.jpg');
+  color: #d9d2d2;
+}
+
 h1 {
     text-align: center;
   }
@@ -11,7 +21,9 @@ h1 {
   
   .column {
     width: 18%;
-    padding: 25px 0px;
+    padding: 25px 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-right: black solid 1px;
   }
 
   .column div {
@@ -68,4 +80,6 @@ h1 {
   button {
     font-size: 14px;
     padding: 5px 10px;
+    border-radius: 15%;
+    color: darkblue;
   }
