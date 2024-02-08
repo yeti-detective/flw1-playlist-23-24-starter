@@ -113,18 +113,6 @@ function clearInputFields() {
   }
 }
 
-// This function empties the divs each time the button is clicked.
-// This prevents the playlist from repeatedly adding data.
-// Try commenting out this function call to see what happens without it!
-// function emptySongInfo() {
-//   document.querySelector('.songs').value = '';
-//   document.querySelector('.images').value = '';
-//   document.querySelector('.artists').value = '';
-//   document.querySelector('.lengths').value = '';
-//   document.querySelector('.links').value = '';
-// }
-
-
 // Use the body of this function to add new songs to your playlist.
 function addSongInfo() {
   // get new values from the UI
