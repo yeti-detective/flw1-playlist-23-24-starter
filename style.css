@@ -5,6 +5,7 @@ html, body {
 
 body {
   background-image: url('https://images4.alphacoders.com/326/thumb-1920-32616.jpg');
+  background-size: cover;
   color: #d9d2d2;
 }
 
