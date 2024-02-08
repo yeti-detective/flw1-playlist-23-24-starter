@@ -13,6 +13,11 @@ h1 {
     width: 18%;
     padding: 25px 0px;
   }
+
+  .column div {
+    height: 100px;
+    text-align: center;
+  }
   
   .images img {
     display: block;
